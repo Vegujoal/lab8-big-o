@@ -31,7 +31,7 @@ int main()
     fillSortedAppointmentIds(appointments100, MEDIUM_COUNT);
     fillSortedAppointmentIds(appointments200, LARGE_COUNT);
 
-    //--- B1: Direct access to one known position ---
+     //--- B1: Direct access to one known position ---
     cout << "Appointment ID at a known index for 50 appointments: "
          << getAppointmentAt(appointments50, 25)
          << " (Direct accesses: 1)" << endl;
@@ -78,7 +78,7 @@ int main()
          << static_cast<double>(linearTotal200) / SEARCH_COUNT << endl;
     
 
-    /* --- B3: Average binary-search comparisons for the same ten targets ---
+    // --- B3: Average binary-search comparisons for the same ten targets ---
     // Keep B2 active: it declares the target ID lists used below.
     int binaryTotal50 = 0;
     int binaryTotal100 = 0;
@@ -101,17 +101,16 @@ int main()
          << static_cast<double>(binaryTotal100) / SEARCH_COUNT << endl;
     cout << "Average binary comparisons for 200 appointments: "
          << static_cast<double>(binaryTotal200) / SEARCH_COUNT << endl;
-    */
+    
 
-    /* --- B4: Distinct appointment pairs that two nested loops would visit ---
+    // --- B4: Distinct appointment pairs that two nested loops would visit ---
     cout << "Possible pairs for 50 appointments: "
          << countPossiblePairs(SMALL_COUNT) << endl;
     cout << "Possible pairs for 100 appointments: "
          << countPossiblePairs(MEDIUM_COUNT) << endl;
     cout << "Possible pairs for 200 appointments: "
          << countPossiblePairs(LARGE_COUNT) << endl;
-    */
-
+    
     return 0;
 }
 
